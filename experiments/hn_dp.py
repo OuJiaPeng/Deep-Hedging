@@ -100,4 +100,5 @@ gp = torch.Generator(device=DEV).manual_seed(321)
 prem_j = float(torch.clamp(simulate_merton(S0,0.0,SIGMA,T,N,400_000,DEV,gp,**JP)[:, -1]-K, min=0).double().mean())
 rho_hn_j = solve_hn(0.01, jump=JP) / LAM - prem_j
 print(f"Merton  c=0.010:  rho_HN = {rho_hn_j:.4f}   (premium {prem_j:.3f})")
-print("  compare Merton c=.01: deep 14.276 | const band 23.985 | WW band 24.889  -> HN is the floor")
+print("  compare Merton c=.01: deep 14.276 | const band 23.985 | WW band 24.889")
+print("  jump DP is numerically unreliable here, so it is NOT used as an oracle/floor")
