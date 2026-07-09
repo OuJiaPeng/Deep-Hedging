@@ -1,15 +1,20 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 *.egg-info/
 .pytest_cache/
 .ruff_cache/
 
-# generated outputs, run logs, pulled market data, model checkpoints — all regenerable
+# Local assistant/editor state
+.claude/
+
+# Generated research outputs and checkpoints
 artifacts/
 runs/
 *.npy
-*.zip
+*.pt
+*.pth
+*.ckpt
 
 # OS
 .DS_Store
