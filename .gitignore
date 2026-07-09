@@ -7,6 +7,8 @@ __pycache__/
 
 # Local assistant/editor state
 .claude/
+INTERVIEW_NOTES.md
+LOCAL_NOTES.md
 
 # Generated research outputs and checkpoints
 artifacts/
